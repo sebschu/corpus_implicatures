@@ -1,64 +1,104 @@
-% 
-% Annual Cognitive Science Conference
-% Sample LaTeX Paper -- Proceedings Format
-% 
+% % 
+% % Annual Cognitive Science Conference
+% % Sample LaTeX Paper -- Proceedings Format
+% % 
 
-% Original : Ashwin Ram (ashwin@cc.gatech.edu)       04/01/1994
-% Modified : Johanna Moore (jmoore@cs.pitt.edu)      03/17/1995
-% Modified : David Noelle (noelle@ucsd.edu)          03/15/1996
-% Modified : Pat Langley (langley@cs.stanford.edu)   01/26/1997
-% Latex2e corrections by Ramin Charles Nakisa        01/28/1997 
-% Modified : Tina Eliassi-Rad (eliassi@cs.wisc.edu)  01/31/1998
-% Modified : Trisha Yannuzzi (trisha@ircs.upenn.edu) 12/28/1999 (in process)
-% Modified : Mary Ellen Foster (M.E.Foster@ed.ac.uk) 12/11/2000
-% Modified : Ken Forbus                              01/23/2004
-% Modified : Eli M. Silk (esilk@pitt.edu)            05/24/2005
-% Modified : Niels Taatgen (taatgen@cmu.edu)         10/24/2006
-% Modified : David Noelle (dnoelle@ucmerced.edu)     11/19/2014
-% Modified : Roger Levy (rplevy@mit.edu)     12/31/2018
+% % Original : Ashwin Ram (ashwin@cc.gatech.edu)       04/01/1994
+% % Modified : Johanna Moore (jmoore@cs.pitt.edu)      03/17/1995
+% % Modified : David Noelle (noelle@ucsd.edu)          03/15/1996
+% % Modified : Pat Langley (langley@cs.stanford.edu)   01/26/1997
+% % Latex2e corrections by Ramin Charles Nakisa        01/28/1997 
+% % Modified : Tina Eliassi-Rad (eliassi@cs.wisc.edu)  01/31/1998
+% % Modified : Trisha Yannuzzi (trisha@ircs.upenn.edu) 12/28/1999 (in process)
+% % Modified : Mary Ellen Foster (M.E.Foster@ed.ac.uk) 12/11/2000
+% % Modified : Ken Forbus                              01/23/2004
+% % Modified : Eli M. Silk (esilk@pitt.edu)            05/24/2005
+% % Modified : Niels Taatgen (taatgen@cmu.edu)         10/24/2006
+% % Modified : David Noelle (dnoelle@ucmerced.edu)     11/19/2014
+% % Modified : Roger Levy (rplevy@mit.edu)     12/31/2018
 
 
 
-%% Change "letterpaper" in the following line to "a4paper" if you must.
+% %% Change "letterpaper" in the following line to "a4paper" if you must.
 
-\documentclass[10pt,letterpaper]{article}
+% \documentclass[10pt,letterpaper]{article}
 
-\usepackage{cogsci}
-\usepackage{color}
+% \usepackage{cogsci}
+% \usepackage{color}
+% \usepackage{graphicx}
+
+% \cogscifinalcopy % Uncomment this line for the final submission 
+
+% \usepackage{pslatex}
+% \usepackage{apacite}
+% \usepackage{float} % Roger Levy added this and changed figure/table
+%                   % placement to [H] for conformity to Word template,
+%                   % though floating tables and figures to top is
+%                   % still generally recommended!
+% \usepackage{booktabs}
+% \usepackage{chngpage}
+
+% %\usepackage{gb4e}
+% \usepackage{lingmacros}
+
+% %\usepackage[none]{hyphenat} % Sometimes it can be useful to turn off
+% %hyphenation for purposes such as spell checking of the resulting
+% %PDF.  Uncomment this block to turn off hyphenation.
+
+% \definecolor{Orange}{RGB}{255,140,0}
+% \newcommand{\ek}[1]{\textcolor{Orange}{[ek: #1]}} 
+
+% \definecolor{Pink}{RGB}{150,0,100}
+% \newcommand{\jd}[1]{\textcolor{Pink}{[jd: #1]}}
+
+
+% \setlength\titlebox{6.5cm}
+
+%
+% File naacl2019.tex
+%
+%% Based on the style files for ACL 2018 and NAACL 2018, which were
+%% Based on the style files for ACL-2015, with some improvements
+%%  taken from the NAACL-2016 style
+%% Based on the style files for ACL-2014, which were, in turn,
+%% based on ACL-2013, ACL-2012, ACL-2011, ACL-2010, ACL-IJCNLP-2009,
+%% EACL-2009, IJCNLP-2008...
+%% Based on the style files for EACL 2006 by 
+%%e.agirre@ehu.es or Sergi.Balari@uab.es
+%% and that of ACL 08 by Joakim Nivre and Noah Smith
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[hyperref]{naaclhlt2019}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{float}
+
+\usepackage{url}
 \usepackage{graphicx}
+\usepackage{amsmath,amssymb}
 
-\cogscifinalcopy % Uncomment this line for the final submission 
+%\aclfinalcopy % Uncomment this line for the final submission
+%\def\aclpaperid{***} %  Enter the acl Paper ID here
 
-\usepackage{pslatex}
-\usepackage{apacite}
-\usepackage{float} % Roger Levy added this and changed figure/table
-                   % placement to [H] for conformity to Word template,
-                   % though floating tables and figures to top is
-                   % still generally recommended!
-\usepackage{booktabs}
-\usepackage{chngpage}
+%\setlength\titlebox{5cm}
+% You can expand the titlebox if you need extra space
+% to show all the authors. Please do not make the titlebox
+% smaller than 5cm (the original size); we will check this
+% in the camera-ready version and ask you to change it back.
 
-%\usepackage{gb4e}
-\usepackage{lingmacros}
-
-%\usepackage[none]{hyphenat} % Sometimes it can be useful to turn off
-%hyphenation for purposes such as spell checking of the resulting
-%PDF.  Uncomment this block to turn off hyphenation.
-
-\definecolor{Orange}{RGB}{255,140,0}
-\newcommand{\ek}[1]{\textcolor{Orange}{[ek: #1]}} 
-
-\definecolor{Pink}{RGB}{150,0,100}
-\newcommand{\jd}[1]{\textcolor{Pink}{[jd: #1]}}
-
-
-\setlength\titlebox{6.5cm}
+\newcommand\BibTeX{B{\sc ib}\TeX}
 
 \newcommand{\eref}[1]{(\ref{#1})}
 \newcommand{\tableref}[1]{Table \ref{#1}}
 \newcommand{\figref}[1]{Figure \ref{#1}}
 \newcommand{\appref}[1]{Appendix \ref{#1}}
 \newcommand{\sectionref}[1]{Section \ref{#1}}
+
+\definecolor{Orange}{RGB}{255,140,0}
+\newcommand{\ek}[1]{\textcolor{Orange}{[ek: #1]}} 
+
+\definecolor{Pink}{RGB}{150,0,100}
+\newcommand{\jd}[1]{\textcolor{Pink}{[jd: #1]}}
 
 \title{Harnessing the richness of the linguistic signal in predicting pragmatic inferences }
  
@@ -83,7 +123,7 @@ computational pragmatics; scalar implicature;
 
 \section{Introduction}
 
-The role of context has long been recognized as central to pragmatics. The field of experimental pragmatics has been instrumental in identifying features of context that listeners use in deriving pragmatic inferences.Recent Bayesian accounts of pragmatic inference within the Rational Speech Act framework \cite{Frank2012, Goodman2016, Franke2016} have provided proof-of-concept demonstrations that pragmatic interpretation can be modeled as the result of listeners integrating their expectations about the utterances a pragmatic speaker with a particular meaning in mind is likely to produce, with their prior beliefs about likely meanings, via Bayes' rule. Pragmatic speakers in turn are modeled as soft-optimal agents that attempt to produce utterances that are both contextually informative and cheap. These models have been successfully applied to many pragmatic phenomena, including scalar implicature \cite{Goodman2013, Degen2015}, reference-based Quantity inferences \cite{Frank2012, Qing2015, Stiller2015, FrankeDegen2015}, embedded implicatures \cite{bergen2016}, figurative meaning \cite{kao2014}, the interpretation of gradable adjectives \cite{lassiter2013}, and generics \cite{tessler2019}.
+The role of context has long been recognized as central to pragmatics. The field of experimental pragmatics has been instrumental in identifying features of context that listeners use in deriving pragmatic inferences. Recent Bayesian accounts of pragmatic inference within the Rational Speech Act framework \cite{frank2012predicting, goodman2016pragmatic, franke2016probabilistic} have provided proof-of-concept demonstrations that pragmatic interpretation can be modeled as the result of listeners integrating their expectations about the utterances a pragmatic speaker with a particular meaning in mind is likely to produce, with their prior beliefs about likely meanings, via Bayes' rule. Pragmatic speakers in turn are modeled as soft-optimal agents that attempt to produce utterances that are both contextually informative and cheap. These models have been successfully applied to many pragmatic phenomena, including scalar implicature \cite{goodman2013knowledge, degen2015processing}, reference-based Quantity inferences \cite{frank2012predicting, qing2015variations, stiller2015ad, franke2016reasoning}, embedded implicatures \cite{bergen2016pragmatic}, figurative meaning \cite{kao2014nonliteral}, the interpretation of gradable adjectives \cite{lassiter2013context}, and generics \cite{tessler2019language}.
 
 Especially for the case of scalar implicature, these models have been shown to be useful for formalizing the way in which extra-linguistic features of context affect the inference. For instance,  \jd{list example sentence plus extra-linguistics features like QUD and speaker knowledge and world knowledge that matter for interpretation}
 
@@ -96,16 +136,16 @@ However, despite this success, criticisms of RSA include
 
 \jd{i'm not sure we need to bash on rsa to get this paper off the ground, but it is a useful way of motivating some of this}
 
-One possibility is that language users learn to use shortcuts to the inference (or lack thereof) by learning associations between surface-level cues present in the linguistic signal and the speaker's intention, across many instances of encountering a scalar expression like \emph{some}.  While little is known about the extent to which listeners use information from the linguistic signal directly when drawing pragmatic inferences in naturally occurring speech, \citeNP{degen2015}, in a crowd-sourced annotation task of naturally occurring sentences with \emph{some} in the Switchboard corpus,  has shown that listeners draw stronger scalar inferences from \emph{some} to \emph{not all} as a function of several features present in the linguistic signal, including when the \emph{some}-NP uses the partitive construction, when it occurs in subject position, and when the embedded NP-referent was previously mentioned. An issue with this study, however, is that the features explored, while motivated by the theoretical literature, are unlikely to constitute the full list of surface features that are likely to be relevant for listeners' inferences. Moreover, it is unclear how the armchair researcher could come by such a list.
+One possibility is that language users learn to use shortcuts to the inference (or lack thereof) by learning associations between surface-level cues present in the linguistic signal and the speaker's intention, across many instances of encountering a scalar expression like \emph{some}.  While little is known about the extent to which listeners use information from the linguistic signal directly when drawing pragmatic inferences in naturally occurring speech, \citet{degen2015investigating}, in a crowd-sourced annotation task of naturally occurring sentences with \emph{some} in the Switchboard corpus, has shown that listeners draw stronger scalar inferences from \emph{some} to \emph{not all} as a function of several features present in the linguistic signal, including when the \emph{some}-NP uses the partitive construction, when it occurs in subject position, and when the embedded NP-referent was previously mentioned. An issue with this study, however, is that the features explored, while motivated by the theoretical literature, are unlikely to constitute the full list of surface features that are likely to be relevant for listeners' inferences. Moreover, it is unclear how the armchair researcher could come by such a list.
 
-Motivated by the problems laid out above -- the need for \jd{something we can use on real, naturally occurring language} and the pragmatic theorist's exhaustive feature list problem -- we decided to enlist the help of recent advances in word embedding models \cite{Pennington2014, Peters2018,XXX}. In particular, we ask: 
+Motivated by the problems laid out above -- the need for \jd{something we can use on real, naturally occurring language} and the pragmatic theorist's exhaustive feature list problem -- we decided to enlist the help of recent advances in word embedding models \cite{pennington2014glove, peters2018deep, devlin2018bert}. In particular, we ask: 
 
 \begin{enumerate}
-	\item How well do neural models that encode each of the sentences with \emph{some} from the \citeNP{degen2015} dataset  predict the obtained human inference judgments? 
-	\item To what extent does the best neural model capture the qualitative effects of the hand-mined features reported by \citeNP{degen2015}?
+	\item How well do neural models that encode each of the sentences with \emph{some} from the \citet{degen2015investigating} dataset predict the obtained human inference judgments? 
+	\item To what extent does the best neural model capture the qualitative effects of the hand-mined features reported by \citet{degen2015investigating}?
 \end{enumerate}
 
-To address these questions, we first compare the performance of neural models that differed in the underlying word embedding model (GLoVe, ELMo) and in the sentence embedding model (mean, LSTM, LSTM$+$attention). We then analyze which, if any, of the original effects reported by \citeNP{degen2015} remain once the model predictions are included as a predictor in the original linear regression model. We then conduct a more qualitative analysis and demonstrate for two of the hand-mined features (partitive and subjecthood) that the best neural model qualitatively replicates those effects. \jd{do any of the attention visualizations add something useful? if so, we should include them}. We close with some remarks on how these models can be used for bootstrapping further relevant linguistic features in the future.
+To address these questions, we first compare the performance of neural models that differed in the underlying word embedding model (GLoVe, ELMo) and in the sentence embedding model (mean, LSTM, LSTM$+$attention). We then analyze which, if any, of the original effects reported by \citet{degen2015investigating} remain once the model predictions are included as a predictor in the original linear regression model. We then conduct a more qualitative analysis and demonstrate for two of the hand-mined features (partitive and subjecthood) that the best neural model qualitatively replicates those effects. \jd{do any of the attention visualizations add something useful? if so, we should include them}. We close with some remarks on how these models can be used for bootstrapping further relevant linguistic features in the future.
 
 
 
@@ -171,12 +211,15 @@ While this is an impressive result, it is not clear whether the neural model cap
 
 XXX
 
-\bibliographystyle{apacite}
+\bibliography{naaclhlt2019}
+\bibliographystyle{acl_natbib}
 
-\setlength{\bibleftmargin}{.125in}
-\setlength{\bibindent}{-\bibleftmargin}
+% \bibliographystyle{apacite}
 
-\bibliography{bibs.bib}
+% \setlength{\bibleftmargin}{.125in}
+% \setlength{\bibindent}{-\bibleftmargin}
+
+% \bibliography{bibs.bib}
 %
 %
 %\section{General Formatting Instructions}
@@ -313,9 +356,6 @@ XXX
 %\nocite{Matlock2001}
 %\nocite{NewellSimon1972a}
 %\nocite{ShragerLangley1990a}
-
-
-
 
 
 \end{document}
